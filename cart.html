@@ -1,0 +1,394 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./Resources/Ellipse 1.png" type="image/x-icon">
+    <link rel="stylesheet" href="./index.css">
+    <title>Cart</title>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar" id="navbar">
+        <h2 class="logo"><a href="dashboard.html" style="color: #9745e0;"><span style='letter-spacing: 0.8vw;'>WIDE</span> <br>CHOICE</a></h2>
+        <nav>
+            <ul>
+                <li><a href="dashboard.html">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#" style='color: #9745e0;'>My Cart</a></li>
+                
+                <li><a href="#about">About</a></li>
+                <li><a href="products.html">Our Products</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="navbuttons">
+            <a href="#"><img src="./Resources/profile.png" height="70%"></a>
+            <a href="./index.html"><button class="navbtn">Logout</button></a>
+        </div>
+        <div class="hamburg" id="hamburg" onclick="navbar()">
+            <div class="bar1"></div>
+            <div class="bar1"></div>
+            <div class="bar1"></div>
+        </div>
+    </div>
+
+    <div class="mobile" id="mobile">
+        <p style="animation-duration: 1s;"><a href="dashboard.html">Home</a></p>
+        <p style="animation-duration: 1.5s;"><a href="#">Profile</a></p>
+        <p style="animation-duration: 2s;"><a href="#" style='color: #9745e0;'>My Cart</a></p>
+        
+        <p style="animation-duration: 2.5s;"><a href="dashboard.html#about">About</a></p>
+        <p style="animation-duration: 3s;"><a href="./products.html">Our Products</a></p>
+        <p style="animation-duration: 3.5s;"><a href="contact.html">Contact Us</a></p>
+        <a href="./index.html"><button class="navbtn">Logout</button></a>
+    </div>
+
+    <!-- Cart -->
+    <div class="main-cart" id="main-cart">
+        <!-- <p style="color: orange;">&#10084;</p> -->
+        <!-- <div class="category">
+            <button>1. Cart</button>
+            <button>2. Shipping Details</button>
+            <button>3. Payment Details</button>
+        </div> -->
+        <div class="cart">
+            <div class="cart-item">
+                <img class='item-img' src="./Resources/shoe.jpg"/>
+                <div class="cart-details">
+                    <div class="cart-details-1">
+                        <strong>Fashion sneakers</strong>
+                        <span>
+                            <button onclick="decreasing('itemAmount-1','itemPrice-1',29,'receipt-amount1','receipt-total1'); total()"> - </button>
+                            <code id="itemAmount-1">1</code>
+                            <button onclick="increasing('itemAmount-1','itemPrice-1',29, 'receipt-amount1','receipt-total1'); total()"> + </button>
+                        </span>
+                        <span id="itemPrice-1">29$</span>
+                        <!-- <strong id="priceTotal">$58</strong> -->
+                    </div>
+                    <div class="cart-details-1">
+                        <i style="color: grey;">Supreme Footwears</i>
+                        <span class="favv" onclick="like(this)">&#10084;</span>
+                        <span><img src="./Resources/remove.png" class="remove"></span>
+                    </div>
+                    <div class="cart-details-1">
+                        <span>Colour</span>
+                        <span style="display: flex;">
+                            <div class="itemcolor" style= "background-color: white;"></div>
+                            <div class="itemcolor" style="background-color: black"></div>
+                            <div class="itemcolor" style="background-color: red"></div>
+                        </span>
+                    </div>
+                    <div class="cart-details-1">
+                        <span>
+                            <span class='star'>&#9733;&#9733;&#9733;&#9733;<span style="color:black">&#9733;</span></span></span>
+                            <span>(71 reviews)</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cart">
+            <div class="cart-item">
+                <img class='item-img' src="./Resources/gown.jpg"/>
+                <div class="cart-details">
+                    <div class="cart-details-1">
+                        <strong>Blue flared gown</strong>
+                        <span>
+                            <button onclick="decreasing('itemAmount-2','itemPrice-2',115,'receipt-amount2','receipt-total2'); total()"> - </button>
+                            <code id="itemAmount-2">1</code>
+                            <button onclick="increasing('itemAmount-2', 'itemPrice-2',115, 'receipt-amount2','receipt-total2'); total()"> + </button>
+                        </span>
+                        <span id="itemPrice-2">115$</span>
+                        <!-- <strong id="priceTotal">$58</strong> -->
+                    </div>
+                    <div class="cart-details-1">
+                        <i style="color: grey;">Andela and Bricks</i>
+                        <span class="favv" onclick="like(this)">&#10084;</span>
+                        <span><img src="./Resources/remove.png" class="remove"></span>
+                    </div>
+                    <div class="cart-details-1">
+                        <span>Colour</span>
+                        <span style="display: flex;">
+                            <div class="itemcolor" style= "background-color: blue;"></div>
+                            <div class="itemcolor" style="background-color: yellow"></div>
+                            <div class="itemcolor" style="background-color: orange"></div>
+                            <div class="itemcolor" style="background-color: purple"></div>
+                        </span>
+                    </div>
+                    <div class="cart-details-1">
+                        <span>
+                            <span class='star'>&#9733;&#9733;&#9733;&#9733;&#9733;<span style="color:black"></span></span></span>
+                            <span>(45 reviews)</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cart">
+            <div class="cart-item">
+                <img class='item-img' src="./Resources/guccibag.jpg"/>
+                <div class="cart-details">
+                    <div class="cart-details-1">
+                        <strong>Designer Bag</strong>
+                        <span>
+                            <button onclick="decreasing('itemAmount-3','itemPrice-3',70,'receipt-amount3','receipt-total3'); total()"> - </button>
+                            <code id="itemAmount-3">1</code>
+                            <button onclick="increasing('itemAmount-3','itemPrice-3',70,'receipt-amount3','receipt-total3'); total()"> + </button>
+                        </span>
+                        <span id="itemPrice-3">70$</span>
+                        <!-- <strong id="priceTotal">$58</strong> -->
+                    </div>
+                    <div class="cart-details-1">
+                        <i style="color: grey;">Gucci</i>
+                        <span class="favv" onclick="like(this)">&#10084;</span>
+                        <span><img src="./Resources/remove.png" class="remove"></span>
+                    </div>
+                    <div class="cart-details-1">
+                        <span>Colour</span>
+                        <span style="display: flex;">
+                            <div class="itemcolor" style= "background-color: midnightblue;"></div>
+                            <div class="itemcolor" style="background-color: palegoldenrod"></div>
+                            <div class="itemcolor" style="background-color: white"></div>
+                            <div class="itemcolor" style="background-color: black"></div>
+                        </span>
+                    </div>
+                    <div class="cart-details-1">
+                        <span>
+                            <span class='star'>&#9733;&#9733;&#9733;<span style="color:black">&#9733;&#9733;</span></span></span>
+                            <span>(24 reviews)</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cart">
+            <div class="cart-item">
+                <img class='item-img' src="./Resources/jeanjacket.jpg"/>
+                <div class="cart-details">
+                    <div class="cart-details-1">
+                        <strong>Jean Jacket</strong>
+                        <span>
+                            <button onclick="decreasing('itemAmount-4','itemPrice-4',29,'receipt-amount4','receipt-total4'); total()"> - </button>
+                            <code id="itemAmount-4">1</code>
+                            <button onclick="increasing('itemAmount-4','itemPrice-4',29,'receipt-amount4','receipt-total4'); total()"> + </button>
+                        </span>
+                        <span id="itemPrice-4">52$</span>
+                        <!-- <strong id="priceTotal">$58</strong> -->
+                    </div>
+                    <div class="cart-details-1">
+                        <i style="color: grey;">Greyson Brothers</i>
+                        <span class="favv" onclick="like(this)">&#10084;</span>
+                        <span><img src="./Resources/remove.png" class="remove"></span>
+                    </div>
+                    <div class="cart-details-1">
+                        <span>Colour</span>
+                        <span style="display: flex;">
+                            <div class="itemcolor" style= "background-color: darkgreen;"></div>
+                            <div class="itemcolor" style="background-color: grey"></div>
+                            <div class="itemcolor" style="background-color: brown"></div>
+                            <div class="itemcolor" style="background-color: khaki"></div>
+                        </span>
+                    </div>
+                    <div class="cart-details-1">
+                        <span>
+                            <span class='star'>&#9733;&#9733;&#9733;&#9733;<span style="color:black">&#9733;</span></span></span>
+                            <span>(32 reviews)</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cart" id="cart-total">
+            <h2>TOTAL<h2><h2 id="items-total">$266</h2>
+        </div>
+
+        <div class="pay">
+            <button onclick="document.getElementById('main-cart').style.display='none';
+            document.getElementById('checkout').style.display='flex';">
+                CLICK TO PAY</button>
+        </div>
+    </div>
+
+    
+
+    <!-- Checkout -->
+    <div class="checkout" id="checkout" loading="lazy">
+        <div class="pays1">
+            <b>PAY WITH</b>
+            <p style="background-color: rgba(0, 255, 0, 0.4);">Card</p>
+            <p>Bank</p>
+            <p>Mobile Money</p> 
+        </div>
+        <div class="pays2">
+            <div class="otinput">
+                <img height="20px" src="./Resources/paystack-logo.svg" alt="paystack logo"/>
+                <h3>Pay USD<span id="check-out" style="color: green"> 266</span></h3>
+            </div>
+            <div style="text-align: center;"><p>Enter your card details to pay</p></div>
+            <input type="tel" placeholder="CARD NUMBER">
+            <div class="otinput">
+                <input type="tel" placeholder="MM/YY"/>
+                <input type="tel" placeholder="CVV"/>
+            </div>
+            <button onclick="document.getElementById('checkout').style.display='none';
+            document.getElementById('navbar').style.display='none';
+            document.getElementById('footer').style.display='none';
+            document.getElementById('receipt').style.display='flex';"
+            >PAY USD <span id="check-out2" style="color: navy">266</span></button>
+        </div>
+    </div>    
+
+    <!-- Receipt -->
+    <div class="receipt" id="receipt">
+        <h1 style="text-align: center; color:#9745e0; margin-bottom: 0px;">WIDE CHOICE</h1>
+        <h5 style="text-align: center">Earn respect just by the way you dress...</h5> <br>
+        <div class="recc">
+            <div style="text-align: left;">
+                <b>Item</b> <br>
+                <span>Fashion Sneakers</span> <br> <br>
+                <span>Blue Gown</span> <br> <br>
+                <span>Designer Bag</span> <br> <br>
+                <span>Jean Jacket</span>  <br> <br> <br>
+                <span><b>Total</b></span> 
+                <i></i>
+            </div>
+            <div>
+                <b>Price</b> <br>
+                <span>$29</span> <br> <br>
+                <span>$115</span> <br> <br>
+                <span>$70</span> <br> <br>
+                <span>$52</span> <br> <br>
+            </div>
+            <div>
+                <b>Amount</b> <br>
+                <span id="receipt-amount1">1</span> <br> <br>
+                <span id="receipt-amount2">1</span> <br> <br>
+                <span id="receipt-amount3">1</span> <br> <br>
+                <span id="receipt-amount4">1</span>  <br> <br>
+            </div>
+            <div>
+                <b>Total</b> <br>
+                <span id="receipt-total1">$29</span> <br> <br>
+                <span id="receipt-total2">$115</span> <br> <br>
+                <span id="receipt-total3">$70</span> <br> <br>
+                <span id="receipt-total4">$52</span>  <br> <br> <br>
+                <span><b id="receipt-total-all">$266</b></span>  <br> <br>
+            </div>
+        </div>
+        
+            
+            
+        <div class="recc2">
+            <img src="./Resources/success.png" width="80px"/> <br> <br>
+            <b>Payment Successful</b> <br> <br>
+            <img width="100px" src="./Resources/paystack-logo.svg"/> <br> <br>
+        </div>
+
+        
+        
+        <button onclick="window.print()">PRINT RECEIPT</button>
+    </div>
+    
+    <!-- Footer -->
+    <div class="footer" id="footer">
+        <div class="footer-1">
+            <div class="wide">
+                <h4>Wide Choice</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut facere voluptatum assumenda id ipsa saepe, impedit incidunt. Voluptate tempore itaque nulla dignissimos aperiam! Eum!</p>
+                <div>
+                    <a href="https://linkedin.com"><img src="./Resources/akar-icons_linkedin-fill.png"></a>
+                    <a href="https://facebook.com"><img src="./Resources/bx_bxl-facebook.png"></a>
+                    <a href="https://instagram.com"><img src="./Resources/akar-icons_instagram-fill.png"></a>
+                    <a href="https://twitter.com"><img src="./Resources/akar-icons_twitter-fill.png"></a>
+                </div>
+            </div>
+            <div class="nlinks">
+                <h4>Navigation Links</h4>
+                <a href="#">How it works</a> <br>
+                <a href="#">Blog</a> <br>
+                <a href="#">FAQ</a> <br>
+                <a href="#">Best Sellers</a> <br>
+                <a href="#">Our Products</a> <br>
+            </div>
+            <div class="sign">
+                <h4>Sign up for our newsletter</h4>
+                <input type="email" placeholder="Enter Email Address" id="newsletter">
+            </div>
+        </div>
+        <div class="footer-2">
+            <span>
+                <code><b>Contact Us</b></code>
+                <code>+2348066287143</code>
+                <code style="border-right: none;">widechoice@aol.com</code>
+            </span>
+        </div>
+    </div>
+    <script>
+        function like (x) {
+            x.classList.toggle('favved');
+        }
+
+        
+        // var a = 1;
+        
+        function increasing (y,z,m,n,p) {
+            var itemAmount = document.getElementById(y);
+            var itemPrice = document.getElementById(z);
+            var receiptAmount = document.getElementById(n);
+            var receiptTotal = document.getElementById(p);
+            var a = document.getElementById(y).innerHTML;
+            a++;
+            itemPrice.innerHTML = a*m + '$';
+            itemAmount.innerHTML = a;
+            receiptAmount.innerHTML = a;
+            receiptTotal.innerHTML = a*m + '$';
+            console.log(a);
+        }
+
+        function decreasing (y,z,m,n,p) {
+            var itemAmount = document.getElementById(y);
+            var itemPrice = document.getElementById(z);
+            var receiptAmount = document.getElementById(n);
+            var receiptTotal = document.getElementById(p);
+            var a = document.getElementById(y).innerHTML;
+            a--;
+            if (a < 0) {a=0};
+            itemAmount.innerHTML = a;
+            itemPrice.innerHTML = a*m + '$';
+            receiptAmount.innerHTML = a;
+            receiptTotal.innerHTML = a*m + '$';
+            console.log(a);
+        }
+
+        function total () {
+            var tot1 = parseFloat(document.getElementById('itemPrice-1').innerHTML);
+            var tot2 = parseFloat(document.getElementById('itemPrice-2').innerHTML);
+            var tot3 = parseFloat(document.getElementById('itemPrice-3').innerHTML);
+            var tot4 = parseFloat(document.getElementById('itemPrice-4').innerHTML);
+            var itemsTotal = document.getElementById('items-total');
+            var checkOut = document.getElementById('check-out');
+            var checkOut2 = document.getElementById('check-out2');
+            var allReceipTotal = document.getElementById('receipt-total-all');
+            var totals = tot1 + tot2 + tot3 + tot4;
+            itemsTotal.innerHTML = '$' + totals;
+            checkOut.innerHTML = totals;
+            checkOut2.innerHTML = totals;
+            allReceipTotal.innerHTML = '$' + totals;
+            console.log(totals);
+            
+        }
+
+        function navbar () {
+    document.getElementById('hamburg').classList.toggle('hamburg2');
+
+    var nv = document.getElementById('mobile');
+    if (nv.style.display==='block')
+    {nv.style.display='none';}
+    else {nv.style.display='block';}
+    
+}
+    </script>
+</body>
+</html>

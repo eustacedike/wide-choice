@@ -1,0 +1,132 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./Resources/Ellipse 1.png" type="image/x-icon">
+    <link rel="stylesheet" href="./index.css">
+    <title>Registration - Wide Choice</title>
+</head>
+<body>
+     <!-- Navigation Bar -->
+     <div class="navbar">
+        <h2 class="logo"><a href="index.html" style="color: #9745e0;"><span style='letter-spacing: 0.8vw;'>WIDE</span> <br>CHOICE</a></h2>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="products.html">Our Products</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="navbuttons">
+            <a href="./signup.html"><button class="navbtn" style="color: #fff; background-color: #9745e0;">Register</button></a>
+            <a href="./login.html" ><button class="navbtn">Login</button></a>
+        </div>
+        <div class="hamburg" id="hamburg" onclick="navbar()">
+            <div class="bar1"></div>
+            <div class="bar1"></div>
+            <div class="bar1"></div>
+        </div>
+    </div>
+
+    <div class="mobile" id="mobile">
+        <p style="animation-duration: 2s;"><a href="index.html">Home</a></p>
+        <p style="animation-duration: 2.5s;"><a href="index.html#about">About</a></p>
+        <p style="animation-duration: 3s;"><a href="./products.html">Our Products</a></p>
+        <p style="animation-duration: 3.5s;"><a href="contact.html">Contact Us</a></p>
+        <a href="./signup.html"><button style="color: #fff; background-color: #9745e0;" class="navbtn">Register</button></a>
+        <a href="./login.html"><button class="navbtn">Login</button></a>
+    </div>
+
+    <!-- Sign In -->
+    <div class="main-form">
+    <div class="my-form">
+        <h2>REGISTRATION</h2>
+        
+        <fieldset>
+            <!-- <legend><b>Sign Up</b></legend> -->
+            
+            <form class="form-body" id="thisreg">
+                <label for="name"><b>Full Name</b></label> <br>
+                <input type="text" for="name" placeholder="Eg: John Doe" required> <br> <br>
+                <label for="name"><b>Username</b></label> <br>
+                <input type="text" for="name" placeholder="Eg: johndoe12" required> <br> <br>
+                <label for="email"><b>Email</b></label> <br>
+                <input type="text" for="email" placeholder="Eg: johndoe@yahoo.com" required> <br> <br>  
+                <label for="password"><b>Password</b></label> <br>
+                <input type="password" for="password" placeholder="*****" required> <br> <br>
+                
+                <!-- <label for="gender" name="gender"><b>Gender</b></label> <br> -->
+                <select class="gender">
+                    <option selected>Select Gender</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                </select>
+                <div class="sub">
+                    <input type="submit" value="SIGN UP">
+                </div>
+                <p style="color: #9745e0"><b>OR</b></p>
+                <button id="google">Sign Up with Google<img src="./Resources/icongoogle.png"></button> <br>
+                <button id="facebook" onclick="window.location.href='https://www.facebook.com/login/'">Sign Up with Facebook<img src="./Resources/bx_bxl-facebook.png"></button>
+            </form>
+        </fieldset>
+        <p style="color: #fff"><a href="./login.html" style="color: aqua"><u>Log in</u></a> if you already have an account...</p>
+
+        
+    </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer" >
+        <div class="footer-1">
+            <div class="wide">
+                <h4>Wide Choice</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut facere voluptatum assumenda id ipsa saepe, impedit incidunt. Voluptate tempore itaque nulla dignissimos aperiam! Eum!</p>
+                <div>
+                    <a href="https://linkedin.com"><img src="./Resources/akar-icons_linkedin-fill.png"></a>
+                    <a href="https://facebook.com"><img src="./Resources/bx_bxl-facebook.png"></a>
+                    <a href="https://instagram.com"><img src="./Resources/akar-icons_instagram-fill.png"></a>
+                    <a href="https://twitter.com"><img src="./Resources/akar-icons_twitter-fill.png"></a>
+                </div>
+            </div>
+            <div class="nlinks">
+                <h4>Navigation Links</h4>
+                <a href="#">How it works</a> <br>
+                <a href="#">Blog</a> <br>
+                <a href="#">FAQ</a> <br>
+                <a href="#">Best Sellers</a> <br>
+                <a href="#">Our Products</a> <br>
+            </div>
+            <div class="sign">
+                <h4>Sign up for our newsletter</h4>
+                <input type="email" placeholder="Enter Email Address" id="newsletter">
+            </div>
+        </div>
+        <div class="footer-2">
+            <span>
+                <code><b>Contact Us</b></code>
+                <code>+2348066287143</code>
+                <code style="border-right: none;">widechoice@aol.com</code>
+            </span>
+        </div>
+    </div>
+    <script>
+        var thisReg = document.getElementById('thisreg');
+        thisReg.onsubmit = function signIn () {
+            window.location.href = "./login.html";
+            return false;
+        }; 
+
+        function navbar () {
+    document.getElementById('hamburg').classList.toggle('hamburg2');
+
+    var nv = document.getElementById('mobile');
+    if (nv.style.display==='block')
+    {nv.style.display='none';}
+    else {nv.style.display='block';}
+    
+}
+    </script>
+</body>
+</html>

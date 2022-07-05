@@ -1,0 +1,194 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./Resources/Ellipse 1.png" type="image/x-icon">
+    <link rel="stylesheet" href="./index.css">
+    <title>Wide Choice - Home Page</title>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <h2 class="logo"><a href="#" style="color: #9745e0;"><span style='letter-spacing: 0.8vw;'>WIDE</span> <br>CHOICE</a></h2>
+        <nav>
+            <ul>
+                <li><a href="#" style='color: #9745e0;'>Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="cart.html">My Cart</a></li>
+                
+                <li><a href="#about">About</a></li>
+                <li><a href="products.html">Our Products</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="navbuttons">
+            <a href="#"><img src="./Resources/profile.png" height="70%"></a>
+            <a href="./index.html"><button class="navbtn">Logout</button></a>
+        </div>
+        <div class="hamburg" id="hamburg" onclick="navbar()">
+            <div class="bar1"></div>
+            <div class="bar1"></div>
+            <div class="bar1"></div>
+        </div>
+    </div>
+
+    <div class="mobile" id="mobile">
+        <p style="animation-duration: 1s;"><a href="#" style='color: #9745e0;'>Home</a></p>
+        <p style="animation-duration: 1.5s;"><a href="#">Profile</a></p>
+        <p style="animation-duration: 2s;"><a href="cart.html">My Cart</a></p>
+        
+        <p style="animation-duration: 2.5s;"><a href="#about">About</a></p>
+        <p style="animation-duration: 3s;"><a href="./products.html">Our Products</a></p>
+        <p style="animation-duration: 3.5s;"><a href="contact.html">Contact Us</a></p>
+        <a href="./index.html"><button class="navbtn">Logout</button></a>
+        
+    </div>
+
+    <!-- User -->
+    <!-- <div class="user">
+        <h4>Welcome, Dear <span id="userp"></span></h4>
+    </div> -->
+
+    <!-- Header -->
+    <div class="header" id="dashhead">
+        <div class="xplore">
+            <h2 class="earn">Earn <span>Respect</span> just by the way you <span>dress</span>
+            </h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex officia in atque repudiandae repellat architecto pariatur? Quaerat aliquid ullam minima.</p>
+            <button onclick="window.location.href='./products.html'">EXPLORE</button>
+        </div>
+        <div class="headerimg">
+            <img src="./Resources/Rectangle 67.png"/>
+        </div>
+    </div>
+
+    <!-- Products -->
+    <div class="main-product">
+    <div class="producthead">
+        <p>Recommended</p>
+        <a href="./products.html" style='color: #9745e0;'><p><b>see more...</b></p></a>
+    </div>
+    <div class="products">
+        <div class="pro">
+            <div id="bg-1" class="bg">
+                <p class="fav" onclick="like(this)">&#10084;</p>
+            </div>
+            <div class="caption">
+                <p style="margin-right: 5px;">Women's Jacket<br><b>$2000</b></p>
+                <button onclick="alert('Added to Cart')" class="cartbtn">Add to Cart</button>
+            </div>
+        </div>
+        <div class="pro">
+            <div id="bg-2" class="bg">
+                <p class="fav" onclick="like(this)">&#10084;</p>
+            </div>
+            <div class="caption">
+                <p style="margin-right: 6px;">Women's Gown<b><br>$5000</b></p>
+                <button onclick="alert('Added to Cart')" class="cartbtn">Add to Cart</button>
+            </div>
+        </div>
+        <div class="pro">
+            <div id="bg-3" class="bg">
+                <p class="fav" onclick="like(this)">&#10084;</p>
+            </div>
+            <div class="caption">
+                <p style="margin-right: 20px;">Men's Jacket<br><b>$3000</b></p>
+                <button onclick="alert('Added to Cart')" class="cartbtn">Add to Cart</button>
+            </div>
+        </div>
+        <div class="pro">
+            <div id="bg-4" class="bg">
+                <p class="fav" onclick="like(this)">&#10084;</p>
+            </div>
+            <div class="caption">
+                <p>Children's Jacket<br><b>$2000</b></p>
+                <button onclick="alert('Added to Cart')" class="cartbtn">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- About Us -->
+    <div class="major-about" id="about">
+        <div class="about-us">
+            <div class="about-us-txt">
+                <h2 class="earn">About Us</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex officia in atque repudiandae repellat architecto pariatur? Quaerat aliquid ullam minima.
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur rerum similique quae ipsum at?
+                </p>
+                
+            </div>
+            <div class="about-us-img">
+                <img src="./Resources/Rectangle 21.png"/>
+            </div>
+        </div>
+
+        <div class="values">
+            <div class="val">
+                <img class="val-img" src="./Resources/thumbs.png"/>
+                <h2>100%</h2>
+                <p>Satisfied Customers</p>
+            </div>
+
+            <div class="val">
+                <img class="val-img" src="./Resources/tick2.png"/>
+                <h2>100%</h2>
+                <p>Satisfied Customers</p>
+            </div>
+
+            <div class="val">
+                <img class="val-img" src="./Resources/fast.png"/>
+                <h2>100%</h2>
+                <p>Satisfied Customers</p>
+            </div>
+
+            <div class="val">
+                <img class="val-img" src="./Resources/customers.png"/>
+                <h2>100%</h2>
+                <p>Satisfied Customers</p>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-1">
+            <div class="wide">
+                <h4>Wide Choice</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut facere voluptatum assumenda id ipsa saepe, impedit incidunt. Voluptate tempore itaque nulla dignissimos aperiam! Eum!</p>
+                <div>
+                    <a href="https://linkedin.com"><img src="./Resources/akar-icons_linkedin-fill.png"></a>
+                    <a href="https://facebook.com"><img src="./Resources/bx_bxl-facebook.png"></a>
+                    <a href="https://instagram.com"><img src="./Resources/akar-icons_instagram-fill.png"></a>
+                    <a href="https://twitter.com"><img src="./Resources/akar-icons_twitter-fill.png"></a>
+                </div>
+            </div>
+            <div class="nlinks">
+                <h4>Navigation Links</h4>
+                <a href="#">How it works</a> <br>
+                <a href="#">Blog</a> <br>
+                <a href="#">FAQ</a> <br>
+                <a href="#">Best Sellers</a> <br>
+                <a href="#">Our Products</a> <br>
+            </div>
+            <div class="sign">
+                <h4>Sign up for our newsletter</h4>
+                <input type="email" placeholder="Enter Email Address" id="newsletter">
+            </div>
+        </div>
+        <div class="footer-2">
+            <span>
+                <code><b>Contact Us</b></code>
+                <code>+2348066287143</code>
+                <code style="border-right: none;">widechoice@aol.com</code>
+            </span>
+        </div>
+    </div>
+    <script src="./index.js">
+     
+    </script>
+</body>
+</html>
